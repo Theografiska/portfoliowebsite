@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    text-align: center;
+}
+
+header nav ul {
+  display: flex;
+}
+
+ul {  
+  list-style: none;
+}
+
