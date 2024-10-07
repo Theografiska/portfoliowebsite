@@ -1,18 +1,84 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 header {
-    position: fixed;
+    position: fixed; 
     width: 100%;
-    text-align: center;
+    height: 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    background-color: #5E9CFE;
+    color: #e2dfdf;
+    box-shadow: 0 1px 1px #3f3c36;
+    z-index: 100;
+}
+
+header h3 {
+    font-size: 2rem;
+    line-height: .8;
+    padding-left: 1.5rem;
 }
 
 header nav ul {
-  display: flex;
+    display: flex;
+    list-style: none;
+    padding-right: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    align-items: center;
 }
 
-ul {  
-  list-style: none;
+ul li {
+    padding-left: 1rem;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+header a {
+    color: #e2dfdf;
+}
+
+button {
+    padding: 6px 10px;
+    background-color: #001242;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+}
+
+button a {
+    color: whitesmoke;
+}
+
+button:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+main {
+    position: relative;
+    top: 6rem; 
+}
+
+.banner {
+    display: flex;
+    text-align: left;
+    background-color: #fff0f0;
+}
+
+.background-container {
+    margin: 8rem 1.5rem 8rem 1.5rem;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color:#001242;
+}
