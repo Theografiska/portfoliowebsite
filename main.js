@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
     const typewriterText = document.querySelector(".typewriter-text");
     const texts = [
-        "Front End Developer",
-        "Back End Developer (soon)",
-        "Full Stack Developer (soon)"
+        "Front-End Developer",
+        "Back-End Developer (soon)",
+        "Full-Stack Engineer (soon)"
     ];
 
     let index = 0;
