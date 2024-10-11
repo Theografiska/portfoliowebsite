@@ -21,7 +21,7 @@
                     <li><a href="#serviceslink">Services</a></li>
                     <li><a href="#aboutlink">About</a></li>
                     <li><a href="#projectslink">Projects</a></li>
-                    <li><button><a href="#">Contact Me</a></button></li>
+                    <li><button><a href="#contactlink">Contact</a></button></li>
                 </ul>
             </nav>
         </header>
@@ -76,14 +76,14 @@
                     </div>
                     <div class="abit">
                         <h3>A Bit About Me</h3>
-                        <p>I started out in tech as venture capital analyst, but after seeing countless great products, it inspired me to learn to code, as well.</p>
+                        <p>Working with founders of early stage startups has inspired me to learn to code myself, as well.</p>
                         <p>My goal is to master both the frontend and backend so I can craft products that don’t just work, but feel seamless. 
                             It’s about seeing the big picture while obsessing over the smallest details—and that’s where I thrive. 
                         </p>
                         <h3>My Technology Toolkit</h3>
                         <div class="languages">
                             <p>What I already use vs what I'm actively learning:</p>
-                            <img src="resources/htmljscss.png" id="know">
+                            <img src="resources/htmljscss.png" id="know"><br>
                             <img src="resources/nodejs.png" class="soon" id="nodejs">
                             <img src="resources/reactjs.png" class="soon" id="react">
                             <img src="resources/postgreSQL.png" class="soon" id="postgreSQL">
@@ -102,7 +102,7 @@
                             <img src="resources/Thumos.png">
                         </div>
                         <div class="buttons">
-                        <button class="code">View Code</button><button class="livesite">Live Site</button>
+                            <button class="code"><a href="https://github.com/Theografiska/thumosbookclub" target="_blank">View Code</a></button><button class="livesite"><a href="https://theografiska.github.io/thumosbookclub/" target="_blank">Live Site</a></button>
                         </div>
                     </div>
                     <div class="project">
@@ -111,7 +111,7 @@
                             <img src="resources/Wheel of Life.png">
                         </div>
                         <div class="buttons">
-                        <button class="code">View Code</button><button class="livesite">Live Site</button>
+                            <button class="code"><a href="#" target="_blank">View Code</a></button><button class="livesite"><a href="#" target="_blank">Live Site</a></button>
                         </div>
                     </div>
                     <div class="project">
@@ -120,20 +120,57 @@
                             <img src="resources/e-com.png">
                         </div>
                         <div class="buttons">
-                            <button class="code">View Code</button><button class="livesite">Live Site</button>
+                            <button class="code"><a href="#" target="_blank">View Code</a></button><button class="livesite"><a href="#" target="_blank">Live Site</a></button>
                             </div>
                     </div>
                 </div>
              </div>
 
+            <!-- Contact Section-->
+              <div class="contactsection">
+                  <h2><span id="contactlink"></span>Contact</h2>
+                  <div class="formsection">
+                     <form>
+                        <h4>Which services would you like to inquire about?</h4>
+                        <div class="checkbox-group">
+                            <label for="frontend">
+                                <input id="frontend" name="service" type="checkbox" value="frontend">
+                                Front-end
+                            </label>
+                            <label for="backend">
+                                <input id="backend" name="service" type="checkbox" value="backend">
+                                Back-end
+                            </label>
+                            <label for="fullstack">
+                                <input id="fullstack" name="service" type="checkbox" value="fullstack">
+                                Full-stack
+                            </label>
+                        </div>
+                        <p>
+                            <label for="name">Name: </label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        </p>
+                        <p>
+                            <label for="email">Email: </label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        </p>
+                        <p>
+                            <label for="message">Message: </label>
+                            <textarea id="message" name="message" rows="10" cols="50" placeholder="Write your message" required></textarea>
+                        </p>
+                        <p>
+                            <input type="submit" value="Submit Message" id="submitbutton">
+                        </p>
+                     </form>
+                  </div>
+              </div>
+
         </main>
 
         <footer>
-            <h4>Made with love in Tallinn 2024.</h4>
+            <p>@Theodor Kaljo, 2024 – made with love in Tallinn.</p>
         </footer>
     
         <script src="main.js"></script>
     </body>
-
-
 </html>

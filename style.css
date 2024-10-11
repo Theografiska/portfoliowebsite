@@ -33,6 +33,12 @@ h2 span {  /* this is used to create correct linking of headings!*/
     top: -6rem;
 }
 
+@media only screen and (max-width:760px) { /* this is used to create correct linking of headings!*/
+    h2 span {
+        top: -4rem;
+    }
+}
+
 h3 {
     margin-bottom: 1.5rem;
     font-size: 1.5rem;
@@ -114,6 +120,27 @@ header a {
     color: #e2dfdf;
 }
 
+@media only screen and (min-width: 200px) and (max-width:760px) {
+    header h3 {
+        display: none;
+    }
+    header nav ul {
+        font-size: .9rem;
+    }
+    header {
+        justify-content: center;
+        height: 4rem;
+    }
+    header button {
+        font-size: 0.9rem;
+        padding: 2px 6px;
+    }
+    .background-container h3 {
+        text-align: center;
+}
+}
+
+
 /* banner or hero section */
 
 main {
@@ -169,6 +196,21 @@ main {
     top: -.3rem;
 }
 
+@media only screen and (min-width: 200px) and (max-width:760px) {
+    main {
+        top: 4rem;
+    }
+    h1 {
+        font-size: 2.75rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    .typewriter-text {
+        font-size: 1.5rem;
+    }
+}
+
 /* services section */
 
 .services {
@@ -213,17 +255,31 @@ main {
     line-height: 1.5;
 }
 
+@media only screen and (max-width: 1100px) {
+    #servicesgrid {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    .service {
+        width: 75%;
+    }
+    .services {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
 /* about section */
 
 .about {
-    background-color: #e3f9fc;
+    background-color: linear-gradient(to right, #e3f9fc, #4068c5);
     color: black;
     padding-left: 1.5rem;
     padding-bottom: 8rem;
 }
 
 .about h2 {
-    padding-top: 2.5rem;
+    padding-top: 4rem;
     margin-bottom: 3rem;
     font-weight: 400;
     text-align: center;
@@ -246,7 +302,7 @@ main {
 }
 
 .profilephoto {
-    margin-left: 2rem;
+    margin-left: 4rem;
     width: auto;
 }
 
@@ -256,7 +312,7 @@ main {
     margin-bottom: 2rem;
     filter: sepia(20%);
     border-radius: 40px;
-    border: 2px solid #001242;
+    border: 2px solid #63139d;
 }
 
 .languages {
@@ -268,20 +324,54 @@ main {
     position: relative;
     left: -3rem;
     top: -1rem;
-    filter: grayscale(90%);
+    filter: grayscale(80%) hue-rotate(270deg) saturate(1.5);
 }
 
 .soon {
     height: 50px;
-    filter: grayscale(100%);
+    filter: grayscale(80%) hue-rotate(270deg);
     opacity: 0.7;
-    margin-left: -1rem;
+    margin-left: 0rem;
     position: relative;
     margin-bottom: 2rem;
 }
 
 #react {
     height: 50px;
+}
+
+@media only screen and (min-width: 200px) and (max-width: 850px) {
+    .about {
+        padding-left: 0;
+        padding-bottom: 4rem;
+    }
+    .personal {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .abit {
+        margin-left: 5%;
+    }
+    .profilephoto {
+        margin-left: 1rem;
+        display: block;
+    }
+    #profilepic {
+        margin-right: 0rem;
+    }
+    .about p {
+        max-width: 90%;
+    }
+    .soon {
+        display: inline-block;
+        margin-right: -1rem;
+    }
+    .about h3 {
+        text-align: center;
+    }
 }
 
 /* projects section */
@@ -292,7 +382,7 @@ main {
 }
 
 .projects h2 {
-    padding-top: 2.5rem;
+    padding-top: 4rem;
     margin-bottom: 3rem;
     font-weight: 400;
     text-align: center;
@@ -304,7 +394,7 @@ main {
     height: auto;
     gap: 2rem;
     justify-items: center;
-    padding-bottom: 3rem;
+    padding-bottom: 8rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
 }
@@ -316,7 +406,7 @@ main {
 
 .image-container img {
     width: 100%;
-    filter: blur(0.5px);
+    filter: blur(0.75px);
 }
 
 .image-container {
@@ -328,6 +418,7 @@ main {
     text-align: center;
     font-size: 1.25rem;
     margin-bottom: 0.5rem;
+    font-weight: 400;
 }
 
 .buttons {
@@ -348,6 +439,178 @@ main {
     color: white;
 }
 
+@media only screen and (max-width: 1000px) {
+    #projectsgrid {
+        grid-template-columns: 1fr;
+    }
+    .project {
+        max-width: 80%;
+    }
+}
+
+@media only screen and (min-width: 200px) and (max-width: 760px) {
+    .buttons button {
+        font-size: .8rem;
+        padding: 4px 8px;
+    }
+}
+
+/* contact */
+
+.contactsection {
+    background-color: #3d414c;
+    color: black;
+}
+
+.contactsection h2 {
+    padding-top: 4rem;
+    margin-bottom: 3rem;
+    font-weight: 400;
+    text-align: center;
+    color:white;
+}
+
+/* form */
+
+.formsection {
+    display: flex;
+    justify-content: center;
+}
+
+.formsection form {
+    gap: 15px;
+    display: inline-block;
+    /* Form outline */
+    padding: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+    background-color: #ffb765;
+    margin-bottom: 4rem;
+}
+
+form p + p {
+    margin-top: 1rem;
+}
+
+form h4 {
+    margin-bottom: .5rem;
+}
+
+#submitbutton {
+    padding: 4px 8px;
+    background-color: #63139d;
+    border-radius: 0.25rem;
+    font-size: .9rem;
+    font-family: "Roboto Mono";
+    color: #e2dfdf;
+    cursor: pointer;
+    margin-left: 100px;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+    width: 40%;
+}
+
+#submitbutton:hover {
+    background-color: #4d0f7d; /* Darker purple on hover */
+}
+
+.formsection p {
+    max-width: 100%;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center; /* Center align labels and inputs */
+}
+
+.checkbox-group {
+    display: flex;
+    gap: 15px; /* Controls the space between the two checkboxes */
+}
+
+.checkbox-group label {
+    display: inline-block;
+    align-items: center;
+    margin-right: 0px;
+    margin-bottom: 10px;
+}
+
+label {
+    /* Uniform size & alignment */
+    display: inline-block;
+    min-width: 90px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+input,
+textarea {
+  /* To make sure that all text fields have the same font settings
+     By default, textareas have a monospace font */
+    font: .8rem "Roboto Mono";
+    width: 100%;
+    max-width: 400px; /* Responsive width control */
+    padding: 6px;
+    border: 1px solid #999;
+    border-radius: 4px; /* Smooth corners */
+}
+
+.formsection textarea {
+    height: 6rem;
+}
+
+input:focus,
+textarea:focus {
+  /* Additional highlight for focused elements */
+  border-color: #000;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Add shadow on focus */
+  transition: border-color 0.2s ease; /* Smooth transition on focus */
+}
+
+textarea {
+    /* Align multiline text fields with their labels */
+    vertical-align: top;
+    /* Provide space to type some text */
+    height: 5rem;
+  }
+  
+@media only screen and (min-width: 200px) and (max-width: 760px) {
+    .formsection form {
+        max-width: 300px;
+        padding: 1rem;
+        font-size: .9rem;
+    }
+    #submitbutton {
+        width: 60%;
+        margin-left: 65px;
+    }
+    .checkbox-group {
+        display: flex;
+        gap: 0px; /* Controls the space between the two checkboxes */
+    }
+    label {
+        /* Uniform size & alignment */
+        display: inline-block;
+        min-width: 60px;
+        text-align: right;
+        margin-right: 5px;
+        font-size: .8rem;
+    }
+}
+
+/* footer */
 footer {
-    color: white;
+    background-color: #001242; 
+    color: white; 
+    text-align: center;  
+    padding: 1rem; 
+    position: relative; 
+    width: 100%;  
+    bottom: 0;  
+    top: 4rem;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+    font-size: .8rem;
+    max-width: 100%;
+    font-family: "Roboto Mono";
 }
