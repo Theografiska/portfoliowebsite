@@ -460,11 +460,12 @@ main {
 .contactsection {
     background-color: #3d414c;
     color: black;
+    padding-bottom: 3rem;
 }
 
 .contactsection h2 {
     padding-top: 4rem;
-    margin-bottom: 3rem;
+    padding-bottom: 3rem;
     font-weight: 400;
     text-align: center;
     color:white;
