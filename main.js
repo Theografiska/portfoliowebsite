@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 currentText += texts[index].charAt(charIndex);
                 charIndex++;
                 typewriterText.textContent = currentText;
-                setTimeout(type, 100);
+                setTimeout(type, 75);
             } else if (isDeleting && charIndex >= 0) {
                 // Deleting text
                 currentText = currentText.substring(0, charIndex);
