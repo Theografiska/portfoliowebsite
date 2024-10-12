@@ -10,7 +10,6 @@ body {
     overflow: scroll;
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
-    background-color: #e3f9fc;
 }
 
 h1 {
@@ -21,11 +20,13 @@ h1 {
 }
 
 h2 {
-    margin-bottom: 1.25rem;
     font-family: "Roboto";
     font-size: 2.5rem;
     font-weight: 500;
+    padding-top: 4rem;
+    margin-bottom: 4rem;
     position: relative;
+    text-align: center;
 }
 
 h2 span {  /* this is used to create correct linking of headings!*/
@@ -42,14 +43,13 @@ h2 span {  /* this is used to create correct linking of headings!*/
 h3 {
     margin-bottom: 1.5rem;
     font-size: 1.5rem;
-    font-family: "Montserrat";
+    font-family: "Roboto";
     font-weight: 500;
 }
 
 p {
     margin-bottom: 1.5rem;
     font-size: 1rem;
-    max-width: 75%;
 }
 
 a {
@@ -73,6 +73,11 @@ button a {
 
 button:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #4d0f7d; /* Darker purple on hover */
+}
+
+.code:hover {
+    background-color: #0e1f50; /* Darker blue on hover of "Live Code" buttons */
 }
 
 /* header settings */
@@ -108,12 +113,12 @@ header nav ul {
     align-items: center;
 }
 
-header button {
-    margin-left: 2rem;
+nav ul li {
+    padding-left: 1rem;
 }
 
-ul li {
-    padding-left: 1rem;
+header button {
+    margin-left: 2rem;
 }
 
 header a {
@@ -135,9 +140,6 @@ header a {
         font-size: 0.9rem;
         padding: 2px 6px;
     }
-    .background-container h3 {
-        text-align: center;
-}
 }
 
 
@@ -149,6 +151,7 @@ main {
 }
 
 .banner {
+    height: 60rem;
     display: flex;
     text-align: center;
     background-image: url('resources/brickwall.png');
@@ -163,15 +166,17 @@ main {
 }
 
 .hero-section {
-    margin: 12rem 1.5rem 8rem 1.5rem;
-    height: 24rem;
+    margin: 20rem 1.5rem 8rem 1.5rem;
 }
 
 .typewriter-text {
     color:#001242;
     white-space: nowrap;
     overflow: hidden;
-    height: 3.5rem;
+    height: 4rem;
+    z-index: 10;
+    padding-top: 0rem;
+    font-size: 2rem;
 }
 
 .hero-section h3 {
@@ -209,6 +214,9 @@ main {
     .typewriter-text {
         font-size: 1.5rem;
     }
+    .background-container h3 {
+        text-align: center;
+    }
 }
 
 /* services section */
@@ -220,10 +228,6 @@ main {
 }
 
 .services h2 {
-    padding-top: 4rem;
-    margin-bottom: 4rem;
-    font-weight: 400;
-    text-align: center;
     color: white;
 }
 
@@ -242,16 +246,32 @@ main {
     color: black;
 }
 
+.serviceimage {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.serviceimage img {
+    max-width: 80%;
+    height: 100px;
+    filter: grayscale(100%);
+    border-radius: .5rem;
+}
+
 .service h3 {
-    text-align: center;
+    text-align: left;
+    max-width: 80%;
+    margin-left: 10%;
     padding-top: 1rem;
     font-family: "Roboto Mono";
     font-weight: 500;
+    font-size: 1.25rem;
 }
 
 .service p {
-    max-width: 90%;
-    margin-left: 5%;
+    max-width: 80%;
+    margin-left: 10%;
     line-height: 1.5;
 }
 
@@ -272,17 +292,12 @@ main {
 /* about section */
 
 .about {
-    background-color: linear-gradient(to right, #e3f9fc, #4068c5);
-    color: black;
+    background: linear-gradient(#c3f8f5, #bbbfe6);    
     padding-left: 1.5rem;
     padding-bottom: 8rem;
 }
 
 .about h2 {
-    padding-top: 4rem;
-    margin-bottom: 3rem;
-    font-weight: 400;
-    text-align: center;
     color:#03247e;
 }
 
@@ -293,22 +308,23 @@ main {
 .about p {
     line-height: 1.5;
     font-weight: 400;
+    max-width: 90%;
 }
+
 .personal {
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
-    align-items: center;
 }
 
 .profilephoto {
-    margin-left: 4rem;
+    margin-left: 2rem;
     width: auto;
 }
 
 #profilepic {
-    max-height: 300px;
-    margin-right: 5rem;
+    max-height: 400px;
+    margin-right: 3rem;
     margin-bottom: 2rem;
     filter: sepia(20%);
     border-radius: 40px;
@@ -317,6 +333,9 @@ main {
 
 .languages {
     position: relative;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    justify-items: start;
 }
 
 #know {
@@ -324,16 +343,20 @@ main {
     position: relative;
     left: -3rem;
     top: -1rem;
-    filter: grayscale(80%) hue-rotate(270deg) saturate(1.5);
+    filter: grayscale(50%) saturate(1.5);
 }
 
 .soon {
     height: 50px;
-    filter: grayscale(80%) hue-rotate(270deg);
+    filter: grayscale(90%) saturate(1.5);
     opacity: 0.7;
-    margin-left: 0rem;
     position: relative;
     margin-bottom: 2rem;
+    margin-right: -1rem;
+}
+
+#learngrid p {
+    max-width: 100%;
 }
 
 #react {
@@ -369,9 +392,6 @@ main {
         display: inline-block;
         margin-right: -1rem;
     }
-    .about h3 {
-        text-align: center;
-    }
 }
 
 /* projects section */
@@ -379,13 +399,6 @@ main {
 .projects {
     background-color: #001242;
     color: white;
-}
-
-.projects h2 {
-    padding-top: 4rem;
-    margin-bottom: 3rem;
-    font-weight: 400;
-    text-align: center;
 }
 
 #projectsgrid {
@@ -419,6 +432,7 @@ main {
     font-size: 1.25rem;
     margin-bottom: 0.5rem;
     font-weight: 400;
+    font-family: "Roboto";
 }
 
 .buttons {
@@ -464,10 +478,6 @@ main {
 }
 
 .contactsection h2 {
-    padding-top: 4rem;
-    padding-bottom: 3rem;
-    font-weight: 400;
-    text-align: center;
     color:white;
 }
 
