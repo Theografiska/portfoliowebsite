@@ -4,7 +4,7 @@
 
 This is my personal portfolio which showcases my programming skills and experience. Link to view live site: https://theografiska.github.io/portfoliowebsite/.
 
-![Screenshot of the product] (resources/screenshot.png)
+![Screenshot of the product](resources/screenshot.png)
 
 ### Technologies used:
 - HTML
