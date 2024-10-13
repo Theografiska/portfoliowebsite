@@ -7,10 +7,16 @@ This is my personal portfolio which showcases my programming skills and experien
 ### Technologies used:
 - HTML
 - CSS
-- Javascript
-- Markdown
+- Javascript  
+- Markdown (for readme)
 - Git (operating through Terminal)
 - GitHub (pushing code from Terminal)
+
+### Main functionality built
+- Fixed navigation bar
+- Typewriter effect for the hero section (Javascript)
+- Multiple display: grid sections.
+- HTML form
 
 ### Screenshots of the website
 
