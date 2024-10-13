@@ -572,8 +572,6 @@ textarea:focus {
 textarea {
     /* Align multiline text fields with their labels */
     vertical-align: top;
-    /* Provide space to type some text */
-    height: 5rem;
   }
 
 #submit-button {
@@ -598,7 +596,7 @@ textarea {
         padding-bottom: 4rem;
     }
     .form-section form {
-        max-width: 300px;
+        max-width: 350px;
         padding: 1rem;
         font-size: .9rem;
     }
@@ -612,9 +610,9 @@ textarea {
     label {
         /* Uniform size & alignment */
         display: inline-block;
-        min-width: 0px;
-        text-align: left;
-        margin-right: 0px;
+        min-width: 60px;
+        text-align: right;
+        margin-right: 10px;
         font-size: .8rem;
     }
     #submit-button {
