@@ -12,16 +12,17 @@
     </head>
 
     <body>
+        <!-- Header section -->
         <header>
             <div id="logo">
                 <h3><a href="#">Theodor<br>Kaljo</a></h3> 
             </div>
             <nav>
                 <ul>
-                    <li><a href="#serviceslink">Services</a></li>
-                    <li><a href="#aboutlink">About</a></li>
-                    <li><a href="#projectslink">Projects</a></li>
-                    <li><button><a href="#contactlink">Contact</a></button></li>
+                    <li><a href="#services-link">Services</a></li>
+                    <li><a href="#about-link">About</a></li>
+                    <li><a href="#projects-link">Projects</a></li>
+                    <li><button><a href="#contact-link">Contact</a></button></li>
                 </ul>
             </nav>
         </header>
@@ -33,70 +34,108 @@
                     <h1>Hi, I am Theo</h1>
                     <h2 class="typewriter-text"></h2>
                     <h3>I am an aspiring Full-Stack Engineer based in Tallinn, Estonia.</h3>
-                    <a href="https://github.com/Theografiska" target="_blank"><img src="resources/Github2.png" id="githublogo" class="socials"></a>
-                    <a href="https://www.linkedin.com/feed/" target="_blank"><img src="resources/linkedin.webp" id="linkedin" class="socials"></a>
-                    <button id="resume"><a href="#">Download Resume</a></button>
+                    <a href="https://github.com/Theografiska" target="_blank"><img src="resources/Github2.png" id="github-logo" class="socials"></a>
+                    <a href="https://www.linkedin.com/feed/" target="_blank"><img src="resources/linkedin.webp" id="linkedin-logo" class="socials"></a>
+                    <button id="resume"><a href="resources/CV.pdf" target="_blank">Download Resume</a></button>
                 </div>
             </div>
 
             <!-- Services section -->
             <div class="services">
-                <h2><span id="serviceslink"></span>Services</h2>
-                <div id="servicesgrid">
+                <h2><span id="services-link"></span>Services</h2>
+                <div id="services-grid">
+                    <!-- Service 1-->
                     <div class="service">
-                        <div class="serviceimage">
+                        <div class="service-image-container">
                             <img src="resources/frontend.jpeg">
                         </div>
                         <h3>Front-End Development</h3>
-                        <p>I specialize in transforming static designs into dynamic, 
-                            responsive interfaces that provide a seamless user experience across devices. 
-                            Whether it’s building clean, modern layouts or implementing interactive features, 
-                            I ensure that the final product is visually appealing and easy to navigate.</p>
+                        <p>As a front-end developer, I create responsive, 
+                            user-focused web interfaces that are fast,
+                            intuitive, and accessible. I specialize in transforming 
+                            design concepts into pixel-perfect web applications using 
+                            modern tools and frameworks like HTML5, CSS3, and JavaScript.
+                        </p> 
+                        <p>
+                            My goal is to deliver clean, maintainable code that enhances 
+                            user experiences and drives engagement. Whether you're looking 
+                            to build from scratch or improve an existing product, I ensure 
+                            your vision comes to life with attention to both functionality 
+                            and aesthetics.
+                        </p>
                     </div>
+                    <!-- Service 2-->
                     <div class="service">
-                        <div class="serviceimage">
+                        <div class="service-image-container">
                             <img src="resources/Backend-End-Development.jpg">
                         </div>
-                        <h3>Back-end Development</h3>
-                        <p>My focus is on building robust, secure, and scalable server-side applications that power the logic, 
-                            databases, and APIs driving the front-end experience. This involves managing data flow, 
-                            implementing business rules, and ensuring that all operations are handled efficiently.</p>
+                        <h3>Back-end Development (soon)</h3>
+                        <p>As a back-end developer, I focus on building the robust, 
+                            scalable systems that power seamless web experiences. 
+                            I design and implement server-side logic, databases, 
+                            and APIs to ensure your application is fast, secure, 
+                            and reliable.
+                        </p>
+                        <p>
+                            With proficiency in Node.js, Express, 
+                            and database management (SQL and NoSQL), I create efficient 
+                            back-end solutions tailored to your needs. Whether it's 
+                            building new features or optimizing existing systems, 
+                            I prioritize clean, maintainable code and scalable architecture 
+                            to support future growth.
+                        </p>
                     </div>
+                    <!-- Service 3-->
                     <div class="service">
-                        <div class="serviceimage">
+                        <div class="service-image-container">
                             <img src="resources/full-stack.png">
                         </div>
-                        <h3>Full-Stack Development</h3>
-                        <p>TBC.</p>
+                        <h3>Full-Stack Development (soon)</h3>
+                        <p>As a full-stack developer, I bring together the best of both 
+                            front-end and back-end development to build complete, 
+                            high-performance web applications.</p> 
+                        <p>
+                            From crafting responsive, 
+                            user-friendly interfaces to implementing the server-side logic, 
+                            databases, and APIs that drive functionality, 
+                            I ensure seamless integration across the entire tech stack.
+                        </p>
                     </div>
                 </div>
             </div>
 
             <!-- About section -->
             <div class="about">
-                <h2><span id="aboutlink"></span>About</h2>
-                <div class="personal">
-                    <div class="profilephoto">
-                        <img src="resources/Theo2.png" id="profilepic">
+                <h2><span id="about-link"></span>About</h2>
+                <div id="about-grid">
+                    <div id="profile-photo-container">
+                        <img src="resources/Theo2.png" id="profile-pic-img">
                     </div>
-                    <div class="abit">
+                    <div id="personal-info">
                         <h3>A Bit About Me</h3>
-                        <p>My tech origins are from the venture capital side. I've seen what works and doesn't when it comes to building and scaling products. 
-                            This has inspired me to learn programming and become a builder myself.</p>
-                        <p>My goal is to master both the frontend and backend so I can craft products that don’t just work, but feel seamless. 
-                            It’s about seeing the big picture while obsessing over the smallest details. 
+                        <p>
+                            My <i>tech origins</i> are from the venture capital side. 
+                            Analyzing thousands of products has shown be what works and 
+                            what doesn't when it comes to building and scaling products. 
+                            This has inspired me to learn programming and become a builder myself.
+                        </p>
+                        <p>My goal is to master both the frontend and backend 
+                            so I can craft products that don’t just work, 
+                            but feel seamless. 
+                            It’s about seeing the big picture 
+                            while obsessing over the smallest details. 
                         </p>
                         <h3>My Technology Toolkit</h3>
-                        <div class="languages">
-                            <div id="knowgrid">
-                                <p>What I already use:</p>
-                                <img src="resources/htmljscss.png" id="know">
+                        <div id="languages-grid">
+                            <div id="languages-using-container">
+                                <h4>What I already use:</h4>
+                                <img src="resources/htmljscss.png" id="languages-use-img">
                             </div>
-                            <div id="learngrid">
-                                <p>What I'm actively learning:</p>
-                                <img src="resources/nodejs.png" class="soon" id="nodejs">
-                                <img src="resources/reactjs.png" class="soon" id="react">
-                                <img src="resources/postgreSQL.png" class="soon" id="postgreSQL">
+                            <div id="languages-learning-container">
+                                <h4>What I'm actively learning:</h4>
+                                <img src="resources/nodejs.png" class="languages-learning-img" id="nodejs">
+                                <img src="resources/reactjs.png" class="languages-learning-img" id="react">
+                                <img src="resources/postgreSQL.png" class="languages-learning-img" id="postgresSQL">
                             </div>
                             
                         </div>
@@ -106,55 +145,61 @@
 
             <!-- Projects section -->
              <div class="projects">
-                <h2><span id="projectslink"></span>Past Projects</h2>
-                <div id="projectsgrid">
+                <h2><span id="projects-link"></span>My Projects</h2>
+                <div id="projects-grid">
+                    <!-- Project 1-->
                     <div class="project">
                         <h4>Thumos Book Club</h4>
-                        <div class="image-container">
+                        <div class="project-image-container">
                             <img src="resources/Thumos.png">
                         </div>
-                        <div class="buttons">
-                            <button class="code"><a href="https://github.com/Theografiska/thumosbookclub" target="_blank">View Code</a></button><button class="livesite"><a href="https://theografiska.github.io/thumosbookclub/" target="_blank">Live Site</a></button>
+                        <div class="project-buttons-container">
+                            <button class="code-button"><a href="https://github.com/Theografiska/thumosbookclub" target="_blank">View Code</a></button>
+                            <button class="livesite-button"><a href="https://theografiska.github.io/thumosbookclub/" target="_blank">Live Site</a></button>
                         </div>
                     </div>
+                    <!-- Project 2-->
                     <div class="project">
                         <h4>Wheel of Life</h4>
-                        <div class="image-container">
+                        <div class="project-image-container">
                             <img src="resources/Wheel of Life.png">
                         </div>
-                        <div class="buttons">
-                            <button class="code"><a href="#" target="_blank">View Code</a></button><button class="livesite"><a href="#" target="_blank">Live Site</a></button>
+                        <div class="project-buttons-container">
+                            <button class="code-button"><a href="#" target="_blank">View Code</a></button>
+                            <button class="livesite-button"><a href="#" target="_blank">Live Site</a></button>
                         </div>
                     </div>
+                    <!-- Project 3-->
                     <div class="project">
                         <h4>E-commerce Store (TBD)</h4>
-                        <div class="image-container">
+                        <div class="project-image-container">
                             <img src="resources/e-com.png">
                         </div>
-                        <div class="buttons">
-                            <button class="code"><a href="#" target="_blank">View Code</a></button><button class="livesite"><a href="#" target="_blank">Live Site</a></button>
-                            </div>
+                        <div class="project-buttons-container">
+                            <button class="code-button"><a href="#" target="_blank">View Code</a></button>
+                            <button class="livesite-button"><a href="#" target="_blank">Live Site</a></button>
+                        </div>
                     </div>
                 </div>
              </div>
 
             <!-- Contact Section-->
-              <div class="contactsection">
-                  <h2><span id="contactlink"></span>Contact</h2>
-                  <div class="formsection">
+              <div class="contact">
+                  <h2><span id="contact-link"></span>Contact</h2>
+                  <div class="form-section">
                      <form>
                         <h4>Which services would you like to inquire about?</h4>
-                        <div class="checkbox-group">
-                            <label for="frontend">
-                                <input id="frontend" name="service" type="checkbox" value="frontend">
+                        <div class="checkbox-section">
+                            <label for="front-end">
+                                <input id="front-end" name="service" type="checkbox" value="front-end">
                                 Front-end
                             </label>
-                            <label for="backend">
-                                <input id="backend" name="service" type="checkbox" value="backend">
+                            <label for="back-end">
+                                <input id="back-end" name="service" type="checkbox" value="back-end">
                                 Back-end
                             </label>
-                            <label for="fullstack">
-                                <input id="fullstack" name="service" type="checkbox" value="fullstack">
+                            <label for="full-stack">
+                                <input id="full-stack" name="service" type="checkbox" value="full-stack">
                                 Full-stack
                             </label>
                         </div>
@@ -171,7 +216,7 @@
                             <textarea id="message" name="message" rows="10" cols="50" placeholder="Write your message" required></textarea>
                         </p>
                         <p>
-                            <input type="submit" value="Submit Message" id="submitbutton">
+                            <input type="submit" value="Submit Message" id="submit-button">
                         </p>
                      </form>
                   </div>
@@ -180,7 +225,7 @@
         </main>
 
         <footer>
-            <p>@Theodor Kaljo, 2024 – made with love in Tallinn.</p>
+            <p>© Theodor Kaljo, 2024. Made with 🩶 in Tallinn.</p>
         </footer>
     
         <script src="main.js"></script>

@@ -13,10 +13,10 @@ body {
 }
 
 h1 {
-    font-size: 4rem;
     font-family: "Roboto";
-    margin-bottom: 1rem;
+    font-size: 4rem;
     color:#03247e;
+    margin-bottom: 1rem;
 }
 
 h2 {
@@ -29,46 +29,54 @@ h2 {
     text-align: center;
 }
 
-h2 span {  /* this is used to create correct linking of headings!*/
+h2 span {  /* this is used to create correct linking of headings */
     position: absolute;
     top: -6rem;
 }
 
-@media only screen and (max-width:760px) { /* this is used to create correct linking of headings!*/
+@media only screen and (max-width:760px) { /* correct linking of headings for smaller screens */
     h2 span {
         top: -4rem;
+    }
+    h2 {
+        padding-top: 2rem;
+        margin-bottom: 2rem;
     }
 }
 
 h3 {
-    margin-bottom: 1.5rem;
-    font-size: 1.5rem;
     font-family: "Roboto";
+    font-size: 1.5rem;
     font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+h4 {
+    font-family: "Roboto Mono";
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    text-align: center;
 }
 
 p {
-    margin-bottom: 1.5rem;
     font-size: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 a {
     text-decoration: none;
-    color: black;
     cursor: pointer;
+    color: #e2dfdf;
 }
 
 button {
-    padding: 6px 10px;
     background-color: #63139d;
-    border-radius: 0.25rem;
-    font-size: 1rem;
+    color: #e2dfdf;
     font-family: "Roboto Mono";
-    color: #e2dfdf;
-}
-
-button a {
-    color: #e2dfdf;
+    font-size: 1rem;
+    padding: 6px 10px;
+    border-radius: 0.25rem;
 }
 
 button:hover {
@@ -76,28 +84,28 @@ button:hover {
     background-color: #4d0f7d; /* Darker purple on hover */
 }
 
-.code:hover {
+.code-button:hover {
     background-color: #0e1f50; /* Darker blue on hover of "Live Code" buttons */
 }
 
 /* header settings */
 
 header {
+    background-color: #001242;
+    color: #e2dfdf;
     position: fixed; 
     width: 100%;
     height: 6rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    align-content: center;
+    /*align-content: center;*/
     text-transform: uppercase;
-    background-color: #001242;
-    color: #e2dfdf;
     box-shadow: 0 1px 1px #3f3c36;
     z-index: 100;
 }
 
-header h3 {
+header h3 { /* The "logo" element */
     font-size: 2rem;
     line-height: 1;
     padding-left: 1.5rem;
@@ -114,34 +122,32 @@ header nav ul {
 }
 
 nav ul li {
-    padding-left: 1rem;
+    padding-left: 2.5rem;
 }
 
 header button {
-    margin-left: 2rem;
-}
-
-header a {
-    color: #e2dfdf;
+    margin-left: 2.5rem;
 }
 
 @media only screen and (min-width: 200px) and (max-width:760px) {
-    header h3 {
-        display: none;
-    }
-    header nav ul {
-        font-size: .9rem;
-    }
     header {
-        justify-content: center;
         height: 4rem;
     }
+    header h3 {
+        font-size: .9rem;
+    }
+    header nav ul {
+        font-size: .8rem;
+    }
+    nav ul li {
+        padding-left: 1rem;
+    }
     header button {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         padding: 2px 6px;
+        margin-left: 1rem;
     }
 }
-
 
 /* banner or hero section */
 
@@ -161,33 +167,29 @@ main {
     justify-content: center;
 }
 
-.banner h2 {
-    font-family: "Roboto Mono";
-}
-
 .hero-section {
-    margin: 20rem 1.5rem 8rem 1.5rem;
+    margin-top: 20rem;
 }
 
 .typewriter-text {
     color:#001242;
+    font-family: "Roboto Mono";
+    font-size: 2rem;
+    height: 4rem; /* this ensures other items aren't moved */
+    padding-top: 0rem; /* other h2's have padding-top, but with padding the text will not be seen */
     white-space: nowrap;
     overflow: hidden;
-    height: 4rem;
-    z-index: 10;
-    padding-top: 0rem;
-    font-size: 2rem;
 }
 
-.hero-section h3 {
+.banner h3 {
     margin-top: 10rem;
 }
 
-#githublogo {
+#github-logo {
     height: 30px;
 }
 
-#linkedin {
+#linkedin-logo {
     height: 40px;
     filter: grayscale(100%);
     position: relative;
@@ -214,46 +216,47 @@ main {
     .typewriter-text {
         font-size: 1.5rem;
     }
-    .background-container h3 {
+    .banner h3 {
         text-align: center;
+        padding: 1rem;
+        font-size: 1.25rem;
     }
 }
 
 /* services section */
 
 .services {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
     background-color: #001242;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
 }
 
 .services h2 {
     color: white;
 }
 
-#servicesgrid {
+#services-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     height: auto;
     gap: 2rem;
-    justify-content: center;
+    justify-content: space-between;
     padding-bottom: 8rem;
 }
 
 .service {
     background-color: #BED1FC;
     border-radius: .5rem;
-    color: black;
 }
 
-.serviceimage {
-    padding: 1rem;
+.service-image-container {
+    padding-top: 1rem;
     display: flex;
     justify-content: center;
 }
 
-.serviceimage img {
-    max-width: 80%;
+.service-image-container img {
+    max-width: 90%;
     height: 100px;
     filter: grayscale(100%);
     border-radius: .5rem;
@@ -261,7 +264,7 @@ main {
 
 .service h3 {
     text-align: left;
-    max-width: 80%;
+    max-width: 85%;
     margin-left: 10%;
     padding-top: 1rem;
     font-family: "Roboto Mono";
@@ -276,12 +279,13 @@ main {
 }
 
 @media only screen and (max-width: 1100px) {
-    #servicesgrid {
+    #services-grid {
         grid-template-columns: 1fr;
         justify-items: center;
     }
     .service {
         width: 75%;
+        max-width: 400px;
     }
     .services {
         padding-left: 0;
@@ -289,12 +293,23 @@ main {
     }
 }
 
+@media only screen and (max-width: 720px) {
+    #services-grid {
+    padding-bottom: 4rem;
+    }
+}
 /* about section */
 
 .about {
     background: linear-gradient(#c3f8f5, #bbbfe6);    
     padding-left: 1.5rem;
     padding-bottom: 8rem;
+}
+
+#about-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
 }
 
 .about h2 {
@@ -311,18 +326,12 @@ main {
     max-width: 90%;
 }
 
-.personal {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-}
-
-.profilephoto {
+#profile-photo-container {
     margin-left: 2rem;
     width: auto;
 }
 
-#profilepic {
+#profile-pic-img {
     max-height: 400px;
     margin-right: 3rem;
     margin-bottom: 2rem;
@@ -331,14 +340,14 @@ main {
     border: 2px solid #63139d;
 }
 
-.languages {
+#languages-grid {
     position: relative;
     display: grid;
     grid-template-columns: 2fr 3fr;
     justify-items: start;
 }
 
-#know {
+#languages-use-img {
     height: 80px;
     position: relative;
     left: -3rem;
@@ -346,7 +355,7 @@ main {
     filter: grayscale(50%) saturate(1.5);
 }
 
-.soon {
+.languages-learning-img {
     height: 50px;
     filter: grayscale(90%) saturate(1.5);
     opacity: 0.7;
@@ -355,8 +364,12 @@ main {
     margin-right: -1rem;
 }
 
-#learngrid p {
+.about h4 {
     max-width: 100%;
+    font-size: 1rem;
+    text-align: left;
+    margin-bottom: 1rem;
+    text-decoration:underline;
 }
 
 #react {
@@ -368,27 +381,27 @@ main {
         padding-left: 0;
         padding-bottom: 4rem;
     }
-    .personal {
+    #about-grid {
         display: grid;
         grid-template-columns: 1fr;
         justify-items: center;
         justify-content: center;
         flex-wrap: wrap;
     }
-    .abit {
-        margin-left: 5%;
-    }
-    .profilephoto {
-        margin-left: 1rem;
-        display: block;
-    }
-    #profilepic {
-        margin-right: 0rem;
-    }
     .about p {
         max-width: 90%;
     }
-    .soon {
+    #personal-info {
+        margin-left: 5%;
+    }
+    #profile-photo-container {
+        margin-left: 1rem;
+        display: block;
+    }
+    #profile-pic-img {
+        margin-right: 0rem;
+    }
+    .languages-learning-img {
         display: inline-block;
         margin-right: -1rem;
     }
@@ -401,7 +414,7 @@ main {
     color: white;
 }
 
-#projectsgrid {
+#projects-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     height: auto;
@@ -417,78 +430,75 @@ main {
     justify-content: center;
 }
 
-.image-container img {
+.projects h4 {
+    font-weight: 300;
+    font-family: "Roboto";
+}
+
+.project-image-container {
+    width: 100%;
+}
+
+.project-image-container img {
     width: 100%;
     filter: blur(0.75px);
 }
 
-.image-container {
-    width: 100%;
-}
-
-.project h4 {
-    display: block;
-    text-align: center;
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-    font-weight: 400;
-    font-family: "Roboto";
-}
-
-.buttons {
+.project-buttons-container {
     display: flex;
     justify-content: center;
 }
 
-.buttons button {
+.project-buttons-container button {
     margin: 1rem;
 }
 
-.livesite {
+.livesite-button {
     background-color: #63139d;
 }
 
-.code {
+.code-button {
     background-color: #032278;
     color: white;
 }
 
 @media only screen and (max-width: 1000px) {
-    #projectsgrid {
+    #projects-grid {
         grid-template-columns: 1fr;
     }
     .project {
-        max-width: 80%;
+        max-width: 70%;
     }
 }
 
 @media only screen and (min-width: 200px) and (max-width: 760px) {
-    .buttons button {
+    .project-buttons-container button {
         font-size: .8rem;
         padding: 4px 8px;
     }
+    #projects-grid {
+        padding-bottom: 4rem;
+    }
 }
 
-/* contact */
+/* contact section */
 
-.contactsection {
+.contact {
     background-color: #3d414c;
     color: black;
-    padding-bottom: 3rem;
+    padding-bottom: 8rem;
 }
 
-.contactsection h2 {
+.contact h2 {
     color:white;
 }
 
-/* form */
-
-.formsection {
+.form-section {
     display: flex;
     justify-content: center;
 }
 
-.formsection form {
+.form-section form {
     gap: 15px;
     display: inline-block;
     /* Form outline */
@@ -496,7 +506,6 @@ main {
     border: 1px solid #ccc;
     border-radius: 1rem;
     background-color: #ffb765;
-    margin-bottom: 4rem;
 }
 
 form p + p {
@@ -504,39 +513,24 @@ form p + p {
 }
 
 form h4 {
-    margin-bottom: .5rem;
+    text-align: left;
+    font-size: 1.25rem;
+    font-family: "Montserrat";
 }
 
-#submitbutton {
-    padding: 4px 8px;
-    background-color: #63139d;
-    border-radius: 0.25rem;
-    font-size: .9rem;
-    font-family: "Roboto Mono";
-    color: #e2dfdf;
-    cursor: pointer;
-    margin-left: 100px;
-    transition: background-color 0.3s ease; /* Smooth hover effect */
-    width: 40%;
-}
-
-#submitbutton:hover {
-    background-color: #4d0f7d; /* Darker purple on hover */
-}
-
-.formsection p {
+.form-section p {
     max-width: 100%;
     margin-bottom: 0;
     display: flex;
     align-items: center; /* Center align labels and inputs */
 }
 
-.checkbox-group {
+.checkbox-section {
     display: flex;
     gap: 15px; /* Controls the space between the two checkboxes */
 }
 
-.checkbox-group label {
+.checkbox-section label {
     display: inline-block;
     align-items: center;
     margin-right: 0px;
@@ -553,17 +547,16 @@ label {
 
 input,
 textarea {
-  /* To make sure that all text fields have the same font settings
-     By default, textareas have a monospace font */
+  /* To make sure that all text fields have the same font settings*/
     font: .8rem "Roboto Mono";
     width: 100%;
     max-width: 400px; /* Responsive width control */
     padding: 6px;
     border: 1px solid #999;
-    border-radius: 4px; /* Smooth corners */
+    border-radius: 4px; 
 }
 
-.formsection textarea {
+.form-section textarea {
     height: 6rem;
 }
 
@@ -582,28 +575,51 @@ textarea {
     /* Provide space to type some text */
     height: 5rem;
   }
+
+#submit-button {
+    padding: 4px 8px;
+    background-color: #63139d;
+    border-radius: 0.25rem;
+    font-size: .9rem;
+    font-family: "Roboto Mono";
+    color: #e2dfdf;
+    cursor: pointer;
+    margin-left: 105px;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+    width: 40%;
+}
+
+#submit-button:hover {
+    background-color: #4d0f7d; /* Darker purple on hover */
+}
   
 @media only screen and (min-width: 200px) and (max-width: 760px) {
-    .formsection form {
+    .contact {
+        padding-bottom: 4rem;
+    }
+    .form-section form {
         max-width: 300px;
         padding: 1rem;
         font-size: .9rem;
     }
-    #submitbutton {
-        width: 60%;
-        margin-left: 65px;
+    .form-section h4 {
+        font-size: 1rem;
     }
-    .checkbox-group {
+    .checkbox-section {
         display: flex;
         gap: 0px; /* Controls the space between the two checkboxes */
     }
     label {
         /* Uniform size & alignment */
         display: inline-block;
-        min-width: 60px;
-        text-align: right;
-        margin-right: 5px;
+        min-width: 0px;
+        text-align: left;
+        margin-right: 0px;
         font-size: .8rem;
+    }
+    #submit-button {
+        width: 60%;
+        margin-left: 60px;
     }
 }
 
