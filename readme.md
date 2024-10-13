@@ -16,5 +16,6 @@ This is my personal portfolio which showcases my programming skills and experien
 
 ![Screenshot of the hero section](resources/screenshot-1.png)
 ![Screenshot of the services section](resources/screenshot-2.png)
+![Screenshot of the about section](resources/screenshot-2.5.png)
 ![Screenshot of the projects section](resources/screenshot-3.png)
 ![Screenshot of the form section](resources/screenshot-4.png)
