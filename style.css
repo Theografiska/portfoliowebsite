@@ -203,6 +203,7 @@ main {
     top: -.3rem;
 }
 
+
 @media only screen and (min-width: 200px) and (max-width:760px) {
     main {
         top: 4rem;
@@ -247,6 +248,7 @@ main {
 .service {
     background-color: #BED1FC;
     border-radius: .5rem;
+    border: 1px solid gray;
 }
 
 .service-image-container {
@@ -428,20 +430,41 @@ main {
 .project {
     border-radius: .5rem;
     justify-content: center;
+    border: 1px solid gray;
+    background-color: #032278;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
 .projects h4 {
+    padding-top: 1rem;
+    margin-bottom: 1rem;
     font-weight: 300;
     font-family: "Roboto";
 }
 
 .project-image-container {
-    width: 100%;
+    width: 80%;
+    margin-left: 10%;
 }
 
 .project-image-container img {
     width: 100%;
     filter: blur(0.75px);
+}
+
+.project-summary p {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    max-width: 80%;
+    margin-left: 10%;
+    font-size: .9rem;
+    line-height: 1.5;
+}
+
+.project-summary ul {
+    margin-left: 4rem;
 }
 
 .project-buttons-container {
@@ -484,16 +507,15 @@ main {
 /* contact section */
 
 .contact {
-    background-image: url(resources/brickwall.png);
+    background-image: url('resources/brickwall.png');
     background-repeat: no-repeat;
     background-position: left;
     background-size: cover;
-    color: #03247e;
     padding-bottom: 8rem;
 }
 
 .contact h2 {
-    color: #001242;
+    color: #032278;
 }
 
 .form-section {
@@ -508,7 +530,9 @@ main {
     padding: 2rem;
     border: 1px solid #ccc;
     border-radius: 1rem;
-    background-color: #ffb765;
+    /*background-color: #ffb765;*/
+    background-color: #d3d3d3;
+    color: black;
 }
 
 form p + p {
@@ -580,6 +604,7 @@ textarea {
 #submit-button {
     padding: 4px 8px;
     background-color: #63139d;
+    /*background-color: #032278;*/
     border-radius: 0.25rem;
     font-size: .9rem;
     font-family: "Roboto Mono";
