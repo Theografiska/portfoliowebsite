@@ -484,13 +484,16 @@ main {
 /* contact section */
 
 .contact {
-    background-color: #3d414c;
-    color: black;
+    background-image: url(resources/brickwall.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    color: #03247e;
     padding-bottom: 8rem;
 }
 
 .contact h2 {
-    color:white;
+    color: #001242;
 }
 
 .form-section {
