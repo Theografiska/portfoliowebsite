@@ -312,7 +312,6 @@ main {
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
-    margin-bottom: 2rem;
 }
 
 .about h2 {
@@ -411,6 +410,7 @@ main {
 }
 
 #calendar-box {
+    padding-top: 2rem;
     margin-right: 1.5rem;
 }
 
