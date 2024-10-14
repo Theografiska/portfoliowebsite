@@ -9,6 +9,11 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!--external stylesheet for Github calendar-->
+        <link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"/>
+        <!--Script for the Github calendar-->
+        <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script> 
     </head>
 
     <body>
@@ -117,10 +122,21 @@
                                 <img src="resources/reactjs.png" class="languages-learning-img" id="react">
                                 <img src="resources/postgreSQL.png" class="languages-learning-img" id="postgresSQL">
                             </div>
-                            
                         </div>
                     </div>
                 </div>
+                <div class="calendar">
+                    <!-- Loading stuff -->
+                    Loading the data just for you.
+                </div>
+                <script>
+                    GitHubCalendar(".calendar", "Theografiska", { responsive: true }); 
+                    /*GitHubCalendar(".calendar", "Theografiska", {
+                        proxy (Theografiska) {
+                        return fetch(`https://your-proxy.com/github?user=${Theografiska}`)
+                        }
+                    }).then(r => r.text())*/
+                </script>
             </div>
 
             <!-- Projects section -->
@@ -257,6 +273,6 @@
             <p>© Theodor Kaljo, 2024. Made with 🩶 in Tallinn.</p>
         </footer>
     
-        <script src="main.js"></script>
+        <script src="main.js"></script> <!--Script for the typewriter effect-->
     </body>
 </html>

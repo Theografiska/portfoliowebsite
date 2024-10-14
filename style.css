@@ -306,12 +306,14 @@ main {
     background: linear-gradient(#c3f8f5, #bbbfe6);    
     padding-left: 1.5rem;
     padding-bottom: 8rem;
+    padding-right: 1.5rem;
 }
 
 #about-grid {
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
+    margin-bottom: 2rem;
 }
 
 .about h2 {
@@ -408,6 +410,7 @@ main {
         margin-right: -1rem;
     }
 }
+
 
 /* projects section */
 
