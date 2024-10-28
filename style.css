@@ -121,7 +121,7 @@ header nav ul {
     align-items: center;
 }
 
-nav ul li {
+header nav ul li {
     padding-left: 2.5rem;
 }
 
@@ -139,7 +139,7 @@ header button {
     header nav ul {
         font-size: .8rem;
     }
-    nav ul li {
+    header nav ul li {
         padding-left: 1rem;
     }
     header button {
@@ -456,7 +456,6 @@ main {
 
 .project-image-container img {
     width: 100%;
-    filter: blur(0.75px);
 }
 
 .project-summary p {
@@ -469,7 +468,7 @@ main {
 }
 
 .project-summary ul {
-    margin-left: 4rem;
+    padding-left: 4rem;
 }
 
 .project-buttons-container {
